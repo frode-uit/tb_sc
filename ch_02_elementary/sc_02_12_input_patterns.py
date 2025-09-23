@@ -5,7 +5,7 @@ svar = input("Skriv ja eller nei: ").strip().lower()
 print(f"Du skrev: {svar}")
 
 # validering mot en liste av gyldige svar
-valg = input("Velg [ja/nei] ").lower()
+valg = input("Velg [ja/nei] ").strip().lower()
 if valg not in ["ja", "nei"]:
     print("Ugyldig valg.")
 
@@ -13,7 +13,7 @@ if valg not in ["ja", "nei"]:
 # Gjenta valg til det er gyldig
 svar = ""
 while svar not in ['a', 'b', 'c']:
-    svar = input("Velg alternativ [a/b/c]: ").lower()
+    svar = input("Velg alternativ [a/b/c]: ").strip().lower()
 print(f"Du valgte alternativ {svar}")
 
 # Input med typekonvertering og feilhåndtering

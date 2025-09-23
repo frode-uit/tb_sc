@@ -2,15 +2,13 @@
 numbers = [3, 7, 2, 8, 4]
 
 for number in numbers:
-    number = number + 1
+    number = number * 2
+    print(number, end=' ')
+print()
 print(numbers)
 
-for 3 not in numbers:
-    number = number + 1
-print(numbers)
-
-for i in range(len(numbers)):
-    numbers[i] = numbers[i] * 2
+for index in range(len(numbers)):
+    numbers[index] = numbers[index] * 2
 print(numbers)
 
 for index, value in enumerate(numbers):

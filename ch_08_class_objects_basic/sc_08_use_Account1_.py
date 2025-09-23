@@ -1,5 +1,5 @@
-# file: sc_07_useAccount1.py
-from sc_07_Account1 import Account
+# file: sc_08_useAccount1.py
+from sc_08_Account1 import Account
 
 account1 = Account(1, 1000, 50000, 7)
 account2 = Account(2, 1001, 10000, 5)

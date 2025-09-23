@@ -1,4 +1,4 @@
-# file: sc_07_Account1.py
+# file: sc_08_Account1.py
 class Account:
     def __init__(self, cust_id, account_no, start_balance, interest):
         self._cust_id = cust_id

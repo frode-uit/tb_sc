@@ -5,8 +5,8 @@
 # Teknikk: # Gjøres ved gjentagne % 2 og // 2 beregninger på number,
 # bygg opp bit strengen tegn for tegn
 
-result_str = ""
 number = 5485
+result_str = ""
 
 while number > 0:
     next_binary_digit = number % 2
@@ -19,12 +19,12 @@ print(result_str) # 1010101101101
 # OBS vi må passe på å spesialbehandle hex_digit > 10, skal bli 'A' til 'F'
 # Bygg opp hex strengen tegn for tegn
 
-result_str = ""
 number = 5485
+result_str = ""
 
 while number > 0:
     next_hex_digit = number % 16
-    if next_hex_digit < 9:
+    if next_hex_digit < 10:
         result_str = chr(next_hex_digit + ord('0')) + result_str
     else:
         result_str = chr((next_hex_digit - 10) + ord('A')) + result_str

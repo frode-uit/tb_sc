@@ -25,10 +25,10 @@ name_list[0] = "suzanne"      # Endrer første element
 mixed_list[1] = "ny_tekst"    # Endrer andre element
 
 # Skrive ut listene
-print(number_list)  # [1, 2, 3]
+print(number_list)  # [1, 2]
 print(number_list2) # [10]
 print(name_list2)   # ['john', 'paul', 'liam']
-print(name_list)    # ['anne', 'bjorn', 'clara']
+print(name_list)    # ['suzanne', 'bjorn', 'clara']
 print(mixed_list)   # [1, 'ny_tekst', 3.14, True]
 
 # initialisere fra en streng

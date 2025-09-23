@@ -10,3 +10,5 @@ summen = sum(heltall_liste)
 print("Summen av de innleste tallene er:", summen)
 heltall_liste.sort()
 print("Tallene, sortert:", heltall_liste)
+
+

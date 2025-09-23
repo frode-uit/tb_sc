@@ -1,4 +1,4 @@
-# file: sc_07_01.py
+# file: sc_08_01.py
 # This code defines a simple class `Car` with methods to "drive" :-)
 # and show information about the car.
 class Car:

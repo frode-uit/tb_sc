@@ -13,7 +13,7 @@ for ch in binary_string:
     result = result + int(ch) * 2** pos
     pos -= 1
 
-print(result)
+print(result) # 5485
 
 # Konvertere fra hex til desimalt
 # Utgangspunkt: en streng som representerer et hex tall
@@ -33,5 +33,5 @@ for ch in hex_string:
     result = result + digit * 16 ** pos
     pos -= 1
 
-print(result)
+print(result) # 5485
 

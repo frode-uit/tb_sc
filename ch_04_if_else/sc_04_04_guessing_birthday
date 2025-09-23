@@ -4,8 +4,14 @@ Lag et program som gjetter brukerens fødselsdag (dag i måneden, 1-31) ved å p
 Brukeren svarer om hans/hennes dag finnes i hver tabell, og programmet regner ut dagen basert på svarene.
 Tema: lister, for-løkke, logikk
 """
+def get_y_n():
+    while True:
+        svar = input("Er din fødselsdag i denne tabellen? (j/n): ").strip().lower()
+        if svar in ('j', 'n'):
+            return svar
+        print("Ugyldig svar. Vennligst svar med 'j' eller 'n'.")
 
-# Novise versjon
+
 print("Gjett din fødselsdag!")
 print("Svar med 'ja' eller 'nei' på om din dag finnes i tabellen.")
 
@@ -17,19 +23,19 @@ tabell5 = [n for n in range(1, 32) if n & 16]
 
 dag = 0
 print("\nTabell 1:", tabell1)
-if input("Er din fødselsdag i denne tabellen? (ja/nei): ").strip().lower() == "ja":
+if get_y_n() == 'j':
     dag += 1
 print("\nTabell 2:", tabell2)
-if input("Er din fødselsdag i denne tabellen? (ja/nei): ").strip().lower() == "ja":
+if get_y_n() == 'j':
     dag += 2
 print("\nTabell 3:", tabell3)
-if input("Er din fødselsdag i denne tabellen? (ja/nei): ").strip().lower() == "ja":
+if get_y_n() == 'j':
     dag += 4
 print("\nTabell 4:", tabell4)
-if input("Er din fødselsdag i denne tabellen? (ja/nei): ").strip().lower() == "ja":
+if get_y_n() == 'j':
     dag += 8
 print("\nTabell 5:", tabell5)
-if input("Er din fødselsdag i denne tabellen? (ja/nei): ").strip().lower() == "ja":
+if get_y_n() == 'j':
     dag += 16
 
 print(f"\nDu er født den {dag} i måneden!")
