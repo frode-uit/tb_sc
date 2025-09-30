@@ -16,13 +16,14 @@ class Account:
     def is_valid_account_no(account_no):
         """Returnerer True hvis kontonummeret er et heltall mellom 1000 og 9999."""
         return isinstance(account_no, int) and 1000 <= account_no <= 9999
+    
     _next_account_no = 1000  # Klassevariabel: neste ledige kontonummer
-    _account_count = 0       # Klassevariabel: antall kontoer
-    _transaction_count = 0   # Klassevariabel: antall transaksjoner totalt
+    _account_count = 0       # Klassevariabel: antall kontoer opprettet
+    _transaction_count = 0   # Klassevariabel: antall transaksjoner utført totalt
 
     @classmethod
     def set_next_account_no(cls, new_start):
-        if new_start > cls._next_account_no:
+        if new_start > cls._next_account_no and Account.is_valid_account_no(new_start):
             cls._next_account_no = new_start
 
     @classmethod
