@@ -4,24 +4,23 @@ import tkinter as tk
 from tkinter import ttk
 from tkinter import messagebox
 
-
 def create_gui():
 	root = tk.Tk()
 	root.title("Listbox + Entry Demo")
 
 	# Instruksjonstekst øverst
-	lbl_intro = tk.Label(root, text="Legg til land i listen ved å skrive i feltet og trykke 'Legg til'.")
-	lbl_intro.pack(padx=10, pady=(10, 0))
+	lb_intro = tk.Label(root, text="Legg til land ved å skrive i feltet og trykke 'Legg til'.")
+	lb_intro.pack(padx=10, pady=(10, 0))
 
 	# Frame for listbox + scrollbar
-	frame = ttk.Frame(root)
-	frame.pack(padx=10, pady=10, fill="both", expand=False)
+	fr_listbox = ttk.Frame(root)
+	fr_listbox.pack(padx=10, pady=10, fill="both", expand=False)
 
-	sb_scroll = ttk.Scrollbar(frame, orient=tk.VERTICAL)
-	lb_countries = tk.Listbox(frame, height=8, yscrollcommand=sb_scroll.set, selectmode=tk.SINGLE)
-	sb_scroll.config(command=lb_countries.yview)
+	sb_scroll = ttk.Scrollbar(fr_listbox, orient=tk.VERTICAL)
+	lbx_countries = tk.Listbox(fr_listbox, height=8, yscrollcommand=sb_scroll.set, selectmode=tk.SINGLE)
+	sb_scroll.config(command=lbx_countries.yview)
 	sb_scroll.pack(side=tk.RIGHT, fill=tk.Y)
-	lb_countries.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+	lbx_countries.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
 	# Forhåndsutfylte land (delvis liste)
 	initial_countries = [
@@ -34,18 +33,18 @@ def create_gui():
 		"Frankrike",
 	]
 	for c in initial_countries:
-		lb_countries.insert(tk.END, c)
+		lbx_countries.insert(tk.END, c)
 
 	# Statusfelt som viser antall elementer
 	status_var = tk.StringVar()
 
 	def update_status():
-		status_var.set(f"Antall land i listen: {lb_countries.size()}")
+		status_var.set(f"Antall land i listen: {lbx_countries.size()}")
 
 	update_status()
 
-	lbl_status = ttk.Label(root, textvariable=status_var, anchor="w")
-	lbl_status.pack(fill="x", padx=10)
+	lb_status = ttk.Label(root, textvariable=status_var, anchor="w")
+	lb_status.pack(fill="x", padx=10)
 
 	# Entry + knapp for å legge til nye land
 	fr_entry = ttk.Frame(root)
@@ -63,13 +62,13 @@ def create_gui():
 			return
 
 		# Sjekk for duplikat (case-insensitiv)
-		existing = [lb_countries.get(i) for i in range(lb_countries.size())]
+		existing = [lbx_countries.get(i) for i in range(lbx_countries.size())]
 		if any(text.lower() == e.lower() for e in existing):
 			messagebox.showinfo("Info", f"'{text}' finnes allerede i listen.")
 			en_entry.delete(0, tk.END)
 			return
 
-		lb_countries.insert(tk.END, text)
+		lbx_countries.insert(tk.END, text)
 		en_entry.delete(0, tk.END)
 		update_status()
 
@@ -77,13 +76,13 @@ def create_gui():
 	bt_add.pack(side=tk.RIGHT, padx=(6, 0))
 
 	# Valgfri: knapp for å fjerne valgte element
-	def remove_selected():
-		sel = lb_countries.curselection()
+	def remove_selected(event=None):
+		sel = lbx_countries.curselection()
 		if not sel:
 			messagebox.showinfo("Info", "Velg et element i listen for å fjerne det.")
 			return
 		idx = sel[0]
-		lb_countries.delete(idx)
+		lbx_countries.delete(idx)
 		update_status()
 
 	bt_remove = ttk.Button(root, text="Fjern valgt", command=remove_selected)
@@ -91,12 +90,10 @@ def create_gui():
 
 	# Tastaturbindinger: Enter legger til, Del fjerner
 	en_entry.bind("<Return>", add_country)
-	root.bind("<Delete>", lambda e: remove_selected())
+	lbx_countries.bind("<Delete>", remove_selected)
 
 	return root
-
 
 if __name__ == "__main__":
 	app = create_gui()
 	app.mainloop()
-
