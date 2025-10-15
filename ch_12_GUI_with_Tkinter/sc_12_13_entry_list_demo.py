@@ -1,20 +1,4 @@
-"""
-Delkapittel: Listbox
-
-Innledning
----------
-En Listbox i Tkinter brukes for å vise en liste med faste eller dynamiske elementer. Den lar
-brukeren velge ett eller flere elementer, og kan kombineres med rullefelt (Scrollbar) når
-listen blir lang. I dette delkapitlet viser vi et enkelt, praktisk eksempel som er nyttig for
-nybegynnere:
-
-- En delvis forhåndsutfylt Listbox med noen landnavn.
-- Et Entry-felt hvor brukeren kan skrive inn nye land og trykke en knapp for å legge dem til.
-- Et enkelt statusfelt som viser hvor mange elementer som finnes i Listboxen.
-
-Eksempelet fokuserer på klar og forståelig kode: hvordan vi legger til elementer, oppdaterer
-status og håndterer enkle valideringsregler (som tom tekst og duplikater).
-"""
+# file: sc_12_13_entry_list_demo.py
 
 import tkinter as tk
 from tkinter import ttk
