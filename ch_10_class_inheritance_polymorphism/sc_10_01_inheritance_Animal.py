@@ -1,6 +1,6 @@
 class Animal:  # Foreldreklasse, arver fra object
     def __init__(self, name):
-        self.name = name
+        self._name = name
 
     def speak(self):
         return "Some generic animal sound"
@@ -21,4 +21,4 @@ class Cat(Animal):  # Subklasse av Animal
 animals = [Dog("Fido", "Labrador"), Cat("Misty"), Animal("Generic")]
 
 for animal in animals:
-   print(f"{animal.name} sier: {animal.speak()}")
+   print(f"{animal._name} sier: {animal.speak()}")
