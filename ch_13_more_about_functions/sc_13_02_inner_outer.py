@@ -1,3 +1,7 @@
+# file: sc_13_02_inner_outer.py
+# Closures - indre funksjoner som "husker" det ytre miljøet
+
+# Eksempel 1: Grunnleggende closure
 def outer(x: int):
     outer_var = x * 2
 
@@ -24,3 +28,27 @@ closure2()  # Printer: 10, 20, 40
 # Begge closures eksisterer samtidig med sine egne verdier
 print("Calling first closure again:")
 closure1()  # Fortsatt: 42, 84, 168
+
+print("\n" + "="*50 + "\n")
+
+# Eksempel 2: Closure som wrapper en funksjon (grunnlag for decorators)
+def simple_decorator(func):
+    # Tar en funksjon og returnerer en ny funksjon som wrapper den.
+    def wrapper():
+        print("--- Før funksjonen kalles ---")
+        func()  # Closure: wrapper husker func
+        print("--- Etter funksjonen er kalt ---")
+    return wrapper
+
+def greet():
+    print("Hei!")
+
+# Manuell "decorering" - erstatter greet med wrapper-versjonen
+print("Original greet:")
+greet()
+
+print("\nNå 'decorerer' vi greet:")
+greet = simple_decorator(greet)  # greet er nå wrapper-funksjonen
+greet()  # Kaller wrapper, som kaller den originale greet
+
+# Dette er nøyaktig det som skjer når vi bruker @-syntaksen i neste fil!
