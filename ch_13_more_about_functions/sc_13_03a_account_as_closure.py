@@ -1,35 +1,5 @@
-# file: sc_13_03_closure_stateful.py
-# Stateful closure - closure som holder på og endrer state
-
-def make_counter(start: int = 0):
-    """Lager en teller-funksjon som husker sin egen count."""
-    count = start  # Denne variabelen blir "fanget" av closure
-    
-    def counter():
-        nonlocal count  # Tillater oss å endre count fra outer scope
-        count += 1
-        return count
-    
-    return counter
-
-# Lag to uavhengige tellere
-counter1 = make_counter(0)
-counter2 = make_counter(100)
-
-print("Counter 1:")
-print(counter1())  # 1
-print(counter1())  # 2
-print(counter1())  # 3
-
-print("\nCounter 2:")
-print(counter2())  # 101
-print(counter2())  # 102
-
-print("\nCounter 1 again:")
-print(counter1())  # 4 (fortsetter å telle)
-
-
-# Mer avansert eksempel: closure med flere funksjoner
+# file: sc_13_03a_account_as_closure.py
+# closure med flere funksjoner
 def make_account(initial_balance: float = 0):
     """Lager et bankkonto-objekt med closure."""
     balance = initial_balance  # Privat variabel

@@ -1,6 +1,6 @@
 # file: sc_13_04_decorator.py
 # Decorators - funksjoner som wrapper andre funksjoner
-# (Dette bygger på closure-konseptet fra sc_13_02_inner_outer.py)
+# (Dette bygger på closure-konseptet fra sc_13_03b_closure_as_wrapper.py)
 
 # Steg 1: Enkel decorator med @-syntaks
 def simple_decorator(func):

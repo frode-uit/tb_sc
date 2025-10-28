@@ -8,6 +8,7 @@ def sort_by_second_element(item):
 
 # Use the sorted function with the custom sorting function
 sorted_data = sorted(data, key=sort_by_second_element)
+# sorted_data = sorted(data, key=lambda x : x[1])
 
 # Print the sorted list
 print(sorted_data)
