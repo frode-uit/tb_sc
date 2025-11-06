@@ -1,0 +1,17 @@
+{
+  // Deaktiver automatiske forslag - du må skrive koden selv
+  "editor.inlineSuggest.enabled": true,
+  
+  // Deaktiver auto-completion fra Copilot
+  "github.copilot.editor.enableAutoCompletions": false,
+  
+  // Men behold Chat for å kunne stille spørsmål
+  "github.copilot.chat.enabled": true,
+  
+  // Deaktiver Copilot i markdown-filer (notater/dokumentasjon)
+  "github.copilot.enable": {
+    "*": true,
+    "markdown": false,
+    "plaintext": true
+  }
+}
