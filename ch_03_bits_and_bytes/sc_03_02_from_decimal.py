@@ -5,7 +5,7 @@
 # Teknikk: # Gjøres ved gjentagne % 2 og // 2 beregninger på number,
 # bygg opp bit strengen tegn for tegn
 
-number = 5485
+number = 17
 result_str = ""
 
 while number > 0:
