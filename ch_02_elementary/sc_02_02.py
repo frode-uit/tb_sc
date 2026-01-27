@@ -1,7 +1,9 @@
 # file name: sc_02_02.py
 from datetime import datetime
 
-current_year = datetime.now().year
+current_date = datetime.now()
+current_year = current_date.year
+
 first_name = input("Hva er ditt navn: ")
 age = int(input("Hva er din alder: "))
 birth_year = current_year - age

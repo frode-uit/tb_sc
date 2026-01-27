@@ -96,4 +96,26 @@ license_registry.setdefault("AB-12345", "This won't replace Alice")
 license_registry.setdefault("YZ-00000", "Olivia Martinez")
 print(f"After setdefault(): {len(license_registry)} entries")
 
+print("\n=== DIFFERENT WAYS TO DELETE ENTRIES ===")
+
+# Method 1: del - removes key and raises KeyError if not found
+del license_registry["YZ-00000"]
+print(f"After del: {len(license_registry)} entries")
+
+# Method 2: pop() - removes and returns value, raises KeyError if not found
+owner = license_registry.pop("UV-88888")
+print(f"Removed owner: {owner}")
+print(f"After pop(): {len(license_registry)} entries")
+
+# Method 3: pop() with default - returns default if key not found
+owner = license_registry.pop("XX-99999", "Unknown")
+print(f"pop() with default (non-existent key): {owner}")
+print(f"After pop(default): {len(license_registry)} entries")
+
+# Method 4: clear() - removes all entries
+small_registry = {"TEST-1": "Test User 1", "TEST-2": "Test User 2"}
+print(f"Small registry before clear(): {len(small_registry)} entries")
+small_registry.clear()
+print(f"Small registry after clear(): {len(small_registry)} entries")
+
 print("\n=== FINAL REGISTRY ===")
