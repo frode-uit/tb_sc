@@ -1,9 +1,8 @@
-class Circle:
-    def __init__(self, radius=1):
-        self._radius = radius
+# Sortér etter det andre elementet i hver underliste
+data = [[1, 'banana'], [2, 'apple'], [3, 'cherry']]
 
-    def __eq__(self, other) -> bool:
-        return self._radius == other._radius
-    
-c = Circle(5)
-print(result = (c == 5)
+def second(item):
+    return item[1]
+
+print(sorted(data, key=second))
+# Alternativ: print(sorted(data, key=lambda x: x[1]))

@@ -1,4 +1,7 @@
 # File: sc_06_04_cels_to_fahr.py
+# Demonstrerer en kodefil som inneholder en funksjon
+# og som kan kjøres direkte eller importeres uten å kjøre koden under if __name__ == "__main__":
+
 # Funksjon som konverterer Celsius til Fahrenheit
 def celsius_to_fahrenheit(celsius):
     fahrenheit = (celsius * 9/5) + 32

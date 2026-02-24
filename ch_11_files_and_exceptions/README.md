@@ -1,3 +1,21 @@
+---
+title: "Kapittel 11 — Filbehandling og exceptions"
+id: "tb_sc_ch_11_files_and_exceptions_README"
+tags: ["fil", "exceptions", "try-except", "with", "pickle"]
+difficulty: "medium"
+prerequisites: ["funksjoner", "klasser"]
+learning_outcomes:
+  - "Åpne og lese filer med ulike metoder"
+  - "Skrive og append data til filer"
+  - "Håndtere exceptions med try/except/finally"
+  - "Lage egne exceptions"
+  - "Bruke context managers med with"
+  - "Serialisere objekter med pickle"
+author: "Frode Næsje & Copilot"
+visibility: "student"
+has_solution: true
+---
+
 ## Kapittel 11 — Filbehandling og exceptions
 
 Dette kapittelet viser grunnleggende filbehandling og unntakshåndtering i Python. Eksemplene er skrevet slik at du kan kjøre dem direkte og studere resultatene. Vi unngår bruk av `dict` og `set` per restriksjon.
@@ -106,4 +124,5 @@ Avsluttende kommentarer
  - Hvis du ønsker, kan jeg også legge til en tabell i README som sammenfatter for/ulemper ved `read()`/`readline()`/`readlines()`, eller lage øvingsoppgaver med løsningsforslag.
 
 Hvis du vil at jeg skal endre formuleringer (mer lærebok‑formelt språk), legge til bilder/diagrammer eller generere oppgaver med løsninger, si fra — så gjør jeg det som neste steg.
+
 
