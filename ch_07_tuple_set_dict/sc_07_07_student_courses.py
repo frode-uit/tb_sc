@@ -1,5 +1,5 @@
 # type: ignore
-# file: sc_07_07_dict_in_dict.py
+# file: sc_07_07_student_courses.py
 # dict i dict - eksempel på nøstet datastruktur
 
 # Studentdatabase: Studenten identifiseres med en student_id; - Hver student har et navn og flere fagkarakterer
