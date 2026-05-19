@@ -1,4 +1,4 @@
-# file: sc_15_08_tower_of_hanoi_wiki.py
+# file: sc_14_08_tower_of_hanoi_wiki.py
 # Tower of Hanoi solution based on Wikipedia description
 def hanoi(n, source, dest, help):
     if n == 1:

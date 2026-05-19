@@ -1,4 +1,4 @@
-# File: sc_15_07_how_to_learn.py
+# File: sc_14_07_how_to_learn.py
 """
 How to get good at recursion: Step-by-step guide
 """

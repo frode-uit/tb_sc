@@ -1,4 +1,4 @@
-# file: sc_15_12_binary_search_iterative.py
+# file: sc_14_12_binary_search_iterative.py
 # iterative binary search implementation
 def binary_search_iterative(arr, target):
     low = 0

@@ -1,4 +1,4 @@
-# File: sc_15_02_sum.py
+# File: sc_14_02_sum.py
 """
 Recursion: Sum of numbers
 Demonstrates returning values from recursive functions

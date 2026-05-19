@@ -1,4 +1,4 @@
-# File: sc_15_06_recursion_vs_iteration.py
+# File: sc_14_06_recursion_vs_iteration.py
 """
 Recursion vs Iteration: When to use which approach
 """

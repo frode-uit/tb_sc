@@ -1,4 +1,4 @@
-# File: sc_15_03_factorial.py
+# File: sc_14_03_factorial.py
 def factorial(n):
     """Calculate n! (n factorial)"""
     if n == 0 or n == 1:  # BASE CASE

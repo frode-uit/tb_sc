@@ -1,4 +1,4 @@
-# file: sc_15_11_binary_search_recursive.py
+# file: sc_14_11_binary_search_recursive.py
 # recursive binary search implementation
 def binary_search(arr, target, low, high):
     # if the range is invalid, the target is not present

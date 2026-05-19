@@ -1,4 +1,4 @@
-# file: sc_15_14_the_sound_of_TOH.py
+# file: sc_14_14_the_sound_of_TOH.py
 """Tower of Hanoi with per-disk sounds."""
 
 from __future__ import annotations

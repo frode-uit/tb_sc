@@ -1,4 +1,4 @@
-# file: sc_15_13_directory.py
+# file: sc_14_13_directory.py
 # Example of using recursion to calculate the total size
 # of a directory (including subdirectories)
 from pathlib import Path

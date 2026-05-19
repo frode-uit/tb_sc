@@ -1,4 +1,4 @@
-# file: sc_15_10_divide_and_conquer_max.py
+# file: sc_14_10_divide_and_conquer_max.py
 # Divide and conquer approach to find the maximum in a list
 def max_divide_conquer(data):
     if len(data) == 1:
